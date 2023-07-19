@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import Button from 'primevue/button';
 </script>
 
 <template>
@@ -9,6 +10,11 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <Button label="Submit" />
+      <i class="pi pi-check"></i>
+      <i class="pi pi-times"></i>
+      <span class="pi pi-search"></span>
+      <span class="pi pi-user"></span>
     </div>
   </header>
 
