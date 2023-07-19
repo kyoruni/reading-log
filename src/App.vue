@@ -1,53 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import Button from 'primevue/button';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <Button label="Submit" />
-      <i class="pi pi-check"></i>
-      <i class="pi pi-times"></i>
-      <span class="pi pi-search"></span>
-      <span class="pi pi-user"></span>
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <Button label="Submit" />
+    <i class="pi pi-check"></i>
+    <i class="pi pi-times"></i>
+    <span class="pi pi-search"></span>
+    <span class="pi pi-user"></span>
   </main>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
