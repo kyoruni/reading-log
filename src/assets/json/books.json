@@ -1,22 +1,52 @@
 [
   {
     "id": 1,
-    "name": "イラスト図解式 この一冊で全部わかるWeb技術の基本"
+    "title": "イラスト図解式 この一冊で全部わかるWeb技術の基本",
+    "publisher": "NRIネットコム株式会社",
+    "publish_date": "2017/03/16",
+    "author": "小林恭平, 坂本陽",
+    "page": 192,
+    "completion_date": "2019/10/23",
+    "memo": "テスト"
   },
   {
     "id": 2,
-    "name": "1週間でLPICの基礎が学べる本 第3版"
+    "title": "1週間でLPICの基礎が学べる本 第3版",
+    "publisher": "インプレス",
+    "publish_date": "2019/06/20",
+    "author": "中島能和",
+    "page": 326,
+    "completion_date": "2020/07/11",
+    "memo": "テスト"
   },
   {
     "id": 3,
-    "name": "Amazon Web Services 基礎からのネットワーク&サーバー構築 改訂3版"
+    "title": "Amazon Web Services 基礎からのネットワーク&サーバー構築 改訂3版",
+    "publisher": "日経BP",
+    "publish_date": "2020/02/06",
+    "author": "大澤文孝, 玉川憲, 片山暁雄, 今井雄太",
+    "page": 216,
+    "completion_date": "2020/12/28",
+    "memo": "テスト"
   },
   {
     "id": 4,
-    "name": "Linuxの絵本 サーバーOSが楽しくわかる9つの扉"
+    "title": "Linuxの絵本 サーバーOSが楽しくわかる9つの扉",
+    "publisher": "翔泳社",
+    "publish_date": "2020/01/20",
+    "author": "株式会社アンク",
+    "page": 216,
+    "completion_date": "2020/12/31",
+    "memo": "テスト"
   },
   {
     "id": 5,
-    "name": "図解即戦力 Amazon Web Servicesのしくみと技術がこれ1冊でしっかりわかる教科書"
+    "title": "図解即戦力 Amazon Web Servicesのしくみと技術がこれ1冊でしっかりわかる教科書",
+    "publisher": "技術評論社",
+    "publish_date": "2019/11/17",
+    "author": "小笠原種高",
+    "page": 240,
+    "completion_date": "2021/01/09",
+    "memo": "テスト"
   }
 ]
