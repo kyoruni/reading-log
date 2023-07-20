@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
+import Header from './components/Header.vue';
 </script>
 
 <template>
+  <Header/>
   <main>
     <Button label="Submit" />
     <i class="pi pi-check"></i>
