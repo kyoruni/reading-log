@@ -1,13 +1,23 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import PrimeVue from 'primevue/config';
-
 import App from './App.vue'
 
-import "primevue/resources/themes/saga-orange/theme.css"
-import "primevue/resources/primevue.min.css"
-import 'primeicons/primeicons.css'
-import "primeflex/primeflex.css"
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import { VDataTable } from 'vuetify/labs/VDataTable'
+import * as directives from 'vuetify/directives'
 
-createApp(App).use(PrimeVue).mount('#app')
+const vuetify = createVuetify({
+  components: {
+    ...components,
+    VDataTable
+  },
+  directives,
+  theme: {
+    defaultTheme: 'light',
+  },
+})
+
+createApp(App).use(vuetify).mount('#app')
