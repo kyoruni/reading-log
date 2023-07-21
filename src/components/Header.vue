@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <h1 class="p-component">読んだ本リスト@kyoruni</h1>
-  <v-btn>
-  Button
-</v-btn>
+  <v-toolbar :color="'#f0f0f0'">
+    <v-toolbar-title style="color: #da2b5c;">読んだ本リスト@kyoruni</v-toolbar-title>
+  </v-toolbar>
 </template>
