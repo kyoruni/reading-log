@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onBeforeMount } from 'vue';
-import books from '@/assets/json/books.json';
 
 interface BookData {
   id: number;
@@ -25,12 +24,38 @@ interface Table {
 const contents = ref<BookData[]>([]);
 const headers = ref<Table[]>([]);
 
+// CSVファイルを読み込んで、行ごとの配列にする
+const fetchCSVFile = async (): Promise<string[]> => {
+  const response = await fetch('/books.csv');
+  const text = await response.text(); // ファイルの内容が全部来る
+  const lines = text.split('\n'); // 改行で分ける
+  return lines;
+}
+
+// CSVの1行をオブジェクトにする
+const parseCSVLineToObject = (line: string): BookData => {
+  const columns = line.split(',');
+  const obj: BookData = {
+    id: parseInt(columns[0]),
+    title: columns[1],
+  };
+  return obj;
+}
+
 onBeforeMount(() => {
   fetchItemList();
 });
 
-const fetchItemList = () => {
-  contents.value = books.slice();
+const fetchItemList = async () => {
+  const csvLines = await fetchCSVFile();
+
+  // 1行目はヘッダーなので、2行目以降のデータを使う
+  for (let i = 1; i < csvLines.length; i++) {
+    const line = csvLines[i];
+    const itemObj = parseCSVLineToObject(line);
+    contents.value.push(itemObj);
+  }
+
   headers.value = [
     { title: "タイトル", key: "title" }
     // { title: "読了日", align: 'start', sortable: true, key: "completion_date", width: "1px" },
@@ -40,8 +65,6 @@ const fetchItemList = () => {
     // { title: "カテゴリー", align: 'start', sortable: true, key: "category", width: "100px" },
     // { title: "ひとこと", align: 'start', sortable: true, key: "impression", width: "200px" }
   ];
-  console.log(headers.value);
-  console.log(contents.value);
 };
 </script>
 
@@ -57,11 +80,3 @@ const fetchItemList = () => {
     scrollX
   ></v-data-table>
 </template>
-
-<style>
-.book-title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-</style>
